@@ -3,8 +3,6 @@
 namespace Pkit\Auth;
 
 use DateTime;
-use Pkit\Http\Request;
-use Pkit\Http\Response;
 use Pkit\Auth\Jwt\JwtEnv;
 
 class Jwt extends JwtEnv
@@ -75,9 +73,9 @@ class Jwt extends JwtEnv
         (new DateTime('now'))->getTimestamp() -
         (new DateTime($created))->getTimestamp();
       if ($interval > $expire)
-        return false;
+        return true;
     }
-    return true;
+    return false;
   }
 
   public static function tokenize(array $payload): string

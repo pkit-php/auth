@@ -39,10 +39,10 @@ class Session extends SessionEnv
         (new DateTime($created))->getTimestamp();
       if ($interval > $expire) {
         Session::logout();
-        return false;
+        return true;
       }
     }
-    return true;
+    return false;
   }
 
   public static function login(mixed $payload)
