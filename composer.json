@@ -1,0 +1,26 @@
+{
+    "name": "pkit/auth",
+    "description": "a simple module for authentication",
+    "type": "library",
+    "require-dev": {
+        "pestphp/pest": "2.33"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Pkit\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "kau-gusto",
+            "email": "kauaug.mo@gmail.com"
+        }
+    ],
+    "require": {},
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    }
+}
